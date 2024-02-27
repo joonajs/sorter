@@ -71,11 +71,11 @@ function FileUploader({ onFileLoad }) {
   };
 
   return (
-    <div className={` mx-auto p-6 w-full bg-zinc-900  min-w-3.5 float-right text-white  duration-300 ease-in-out ${dragOver ? ' border-green-500' : 'bg-gray-200'} transition-all`}
+    <div className={` mx-auto p-6  w-full bg-zinc-900  min-w-3.5 float-right text-white  duration-300 ease-in-out ${dragOver ? ' border-green-500' : 'bg-gray-200'} transition-all`}
          onDragOver={handleDragOver}
          onDragLeave={handleDragLeave}
          onDrop={handleDrop}>
-      <div className={`p-6 mt-2 border- ${dragOver ? 'border-green-500 bg-green-500 border-4' : 'border-gray-500'} bg-zinc-800 cursor-pointer transition-all duration-300 ease-in-out rounded-3xl`}
+      <div className={`p-6 mt-2 hover:p-10 hover:border-green-500 hover:border-4 ${dragOver ? 'border-green-500 bg-green-500 border-4' : 'border-gray-500'} bg-zinc-800 cursor-pointer transition-all duration-300 ease-in-out rounded-3xl`}
            onClick={() => document.getElementById('fileInput').click()}>
         <input 
           id="fileInput"

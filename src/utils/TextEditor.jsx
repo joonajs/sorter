@@ -11,7 +11,7 @@ function TextEditor({ text, onTextChange }) {
   );
 
   return (
-    <div className="overflow-hidden max-w-full bg-zinc-800  text-white">
+    <div className="overflow-hidden max-w-full bg-zinc-800 border-b-4 border-zinc-700 text-white">
       <div className='px-2'>
       <List
         height={600}

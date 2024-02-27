@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  background-color: #18181B;
+}
+
 .toast-enter {
   opacity: 0;
   transform: translateY(20px);

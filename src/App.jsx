@@ -12,11 +12,14 @@ function App() {
   };
 
   return (
-    <div className='app-container min-h-screen bg-zinc-900  items-center'>
+    <div>
+    <div className='app-container min-h-screen min-w-full bg-zinc-900  items-center'>
       <div className=' min-w-full mx-auto p-6 '>
         <TextSorter text={text} setText={setText} />
-        <FileUploader onFileLoad={handleFileLoad} />
+        <FileUploader  onFileLoad={handleFileLoad} />
+        
       </div>
+    </div>
     </div>
   );
 }

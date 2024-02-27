@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TextEditor from './TextEditor';
-import { MdOutlineTextRotateVertical, MdOutlineAutoAwesome, MdOutlineFileDownload, MdOutlinePlaylistRemove } from "react-icons/md";
+import { MdOutlineTextRotateVertical, MdOutlineAutoAwesome, MdOutlineFileDownload, MdOutlinePlaylistRemove, MdOutlineClearAll } from "react-icons/md";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 
@@ -87,6 +87,17 @@ const sortText = () => {
     setTimeout(() => setShowToast(false), 3000); 
   };
 
+  const handleOriginal = () => {
+    setText(initialText);
+    addToast('Original text restored successfully!');
+    setShowToast(true); // Show the toast
+    setTimeout(() => setShowToast(false), 3000);
+  };
+
+  
+
+
+
  
 
   return (
@@ -106,7 +117,7 @@ const sortText = () => {
     </TransitionGroup>
 </div>
     <div className='max-w-full mx-auto bg-zinc-800'>
-      <div className="flex items-center p-1 bg-zinc-900">
+      <div className="flex items-center p-1 bg-zinc-900  ">
         <button 
           onClick={sortText} 
           className="px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-gray-700 transition-all duration-300 ease-in-out font-medium text-sm"
@@ -117,7 +128,7 @@ const sortText = () => {
           onClick={toggleRemoveEmptyLines}
           className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
-         <MdOutlinePlaylistRemove /> Remove Empty Lines
+         <MdOutlinePlaylistRemove /> Empty Lines
         </button>
         <button 
           onClick={handleCopy}
@@ -130,6 +141,12 @@ const sortText = () => {
           className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
           <MdOutlineFileDownload /> Download Text
+        </button>
+        <button 
+          onClick={handleOriginal  }
+          className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
+        >
+          <MdOutlineClearAll /> Original Text
         </button>
       </div>
       
