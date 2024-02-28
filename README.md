@@ -19,5 +19,3 @@ Sorter is a modern, web-based application built with React, designed to sort con
 - **Remove Empty Lines (optional)**: Toggle the 'Remove Empty Lines' option to filter out any blank lines from your document.
 - **Download Sorted Text**: Click the 'Download Text' button to save the sorted text to your device.
 - **Restore Original Text**: Click the 'Original Text' button to revert back to the initial unsorted text.
-
-## Check out the demo website [here! ❤️](https://sorter-pi.vercel.app/)
