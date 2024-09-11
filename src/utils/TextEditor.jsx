@@ -11,7 +11,7 @@ function TextEditor({ text, onTextChange }) {
   );
 
   return (
-    <div className="overflow-hidden max-w-full bg-zinc-800 border-b-4 border-zinc-700 text-white">
+    <div className="overflow-hidden max-w-full bg-white border-b-4 border-neutral-100 text-black">
       <div className='px-2'>
       <List
         height={600}
@@ -23,8 +23,8 @@ function TextEditor({ text, onTextChange }) {
         {Row}
       </List>
       </div>
-      <div className="px-4 py-2 bg-zinc-800 text-right">
-        <p className='text-zinc-500 border-zinc-500 text-sm'>
+      <div className="px-4 py-2 bg-white text-right">
+        <p className='text-zinc-400 w-full text-sm'>
           Total Lines: {totalLines}
         </p>
       </div>

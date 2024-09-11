@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProgressBar from '../components/ProgressBar';
+import { MdOutlineTextRotateVertical, MdOutlineAutoAwesome, MdOutlineFileDownload, MdOutlinePlaylistRemove, MdOutlineClearAll } from "react-icons/md";
 
 function FileUploader({ onFileLoad }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -7,6 +8,9 @@ function FileUploader({ onFileLoad }) {
   const [progress, setProgress] = useState(0);
   const [dragOver, setDragOver] = useState(false);
 
+  /* 
+    
+  */
   const processChunk = (chunk) => {
     return chunk;
   };
@@ -15,6 +19,8 @@ function FileUploader({ onFileLoad }) {
     setIsLoading(true);
     setSelectedFile(file.name);
     setProgress(0);
+
+
 
     const chunkSize = 1024 * 1024; // 1MB
     let offset = 0;
@@ -71,11 +77,11 @@ function FileUploader({ onFileLoad }) {
   };
 
   return (
-    <div className={` mx-auto p-6  w-full bg-zinc-900  min-w-3.5 float-right text-white  duration-300 ease-in-out ${dragOver ? ' border-green-500' : 'bg-gray-200'} transition-all`}
+    <div className={` mx-auto  w-full bg-transparent  min-w-3.5 float-right text-black duration-100 ease-in-out ${dragOver ? ' border-green-500' : 'bg-gray-200'} transition-all`}
          onDragOver={handleDragOver}
          onDragLeave={handleDragLeave}
          onDrop={handleDrop}>
-      <div className={`p-6 mt-2 hover:p-10 hover:border-green-500 hover:border-4 ${dragOver ? 'border-green-500 bg-green-500 border-4' : 'border-gray-500'} bg-zinc-800 cursor-pointer transition-all duration-300 ease-in-out rounded-3xl`}
+      <div className={`py-5 mt-2 hover:p-10 hover:bg-white hover:text-black hover:border-black border font-semibold  border-transparent hover:border ${dragOver ? 'border-green-500 bg-green-500' : 'border-gray-500'} bg-black text-white cursor-pointer transition-all duration-300 ease-in-out`}
            onClick={() => document.getElementById('fileInput').click()}>
         <input 
           id="fileInput"
@@ -84,7 +90,7 @@ function FileUploader({ onFileLoad }) {
           className="hidden"
           disabled={isLoading}
         />
-        <p className="text-center text-sm transition-all duration-700">{dragOver ? "Release drag to select the file" : "Drag and drop a file here or click to select a file"}</p>
+        <p className="text-center text-sm transition-all ">{dragOver ? "Release drag to select the file" :  "Drag and drop a file here or click to select a file"} </p>
       </div>
       {isLoading && <ProgressBar completed={progress} />}
       {!isLoading && selectedFile && <div className="mt-4 text-sm text-center">File uploaded: <span className="font-bold">{selectedFile}</span></div>}

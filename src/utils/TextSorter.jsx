@@ -106,7 +106,7 @@ const sortText = () => {
     <TransitionGroup>
     {toasts.map((toast) => (
     <CSSTransition key={toast.id} timeout={300} classNames="toast">
-        <div className="bg-zinc-800 text-white py-2 px-4 flex items-center z-50 mb-1">
+        <div className="bg-white border-black border text-black py-2 px-4 flex items-center z-50 mb-1">
             {toast.type === 'info' && <MdOutlineAutoAwesome className="mr-2" />}
             {toast.type === 'error' && <MdOutlinePlaylistRemove className="mr-2" />}
             {toast.message}
@@ -116,35 +116,35 @@ const sortText = () => {
 
     </TransitionGroup>
 </div>
-    <div className='max-w-full mx-auto bg-zinc-800'>
-      <div className="flex items-center p-1 bg-zinc-900  ">
+    <div className='max-w-full mx-auto bg-white border border-black'>
+      <div className="flex items-end p-1 bg-white border-b border-black  ">
         <button 
           onClick={sortText} 
-          className="px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-gray-700 transition-all duration-300 ease-in-out font-medium text-sm"
+          className="px-4 py-2 bg-white text-black border-black active:px-6 border-b-2 active:border-b-2 hover:bg-neutral-100 focus:outline-none focus:ring-0 focus:ring-gray-700 transition-all duration-300 ease-in-out font-medium text-sm"
         >
           <MdOutlineTextRotateVertical /> Sort Text
         </button>
         <button 
           onClick={toggleRemoveEmptyLines}
-          className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
+          className="ml-2 px-4 py-2 bg-white text-black border-black active:px-6 border-b-2 active:border-b-2 hover:bg-neutral-100 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
          <MdOutlinePlaylistRemove /> Empty Lines
         </button>
         <button 
           onClick={handleCopy}
-          className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-blue-400 transition-all duration-300 ease-in-out font-medium text-sm"
+          className="ml-2 px-4 py-2 bg-white text-black border-black active:px-6 border-b-2 active:border-b-2 hover:bg-neutral-100 focus:outline-none focus:ring-0 focus:ring-blue-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
           <MdOutlineAutoAwesome /> Copy Text
         </button>
         <button 
           onClick={handleDownload}
-          className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
+          className="ml-2 px-4 py-2 bg-white text-black border-black active:px-6 border-b-2 active:border-b-2 hover:bg-neutral-100 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
           <MdOutlineFileDownload /> Download Text
         </button>
         <button 
           onClick={handleOriginal  }
-          className="ml-2 px-4 py-2 bg-zinc-900 text-white active:px-6 border-b-2 active:border-b-2 hover:bg-zinc-800 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
+          className="ml-2 px-4 py-2 bg-white text-black border-black active:px-6 border-b-2 active:border-b-2 hover:bg-neutral-100 focus:outline-none focus:ring-0 focus:ring-green-400 transition-all duration-300 ease-in-out font-medium text-sm"
         >
           <MdOutlineClearAll /> Original Text
         </button>
